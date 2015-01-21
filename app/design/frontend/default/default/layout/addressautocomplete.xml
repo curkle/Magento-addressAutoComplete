@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <checkout_onepage_index>
+        <reference name="head">
+            <block type="core/text" name="google.api.map">
+            <action method="setText">
+                <text><![CDATA[<script src="https://maps.googleapis.com/maps/api/js?v=3&libraries=places"></script>]]></text>
+            </action>
+       		 </block>
+       		  <action method="addItem"><type>skin_js</type><name>js/addressautocomplete/onstepcheckout.js</name></action>
+        </reference>
+    </checkout_onepage_index>
+</layout>

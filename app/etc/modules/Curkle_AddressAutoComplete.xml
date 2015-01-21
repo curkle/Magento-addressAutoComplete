@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Curkle_AddressAutoComplete>
+      <active>true</active>
+      <codePool>local</codePool>
+      <version>0.1.0</version>
+    </Curkle_AddressAutoComplete>
+  </modules>
+</config>

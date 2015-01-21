@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Curkle_AddressAutoComplete>
+      <version>0.1.0</version>
+    </Curkle_AddressAutoComplete>
+  </modules>
+  <frontend>
+        <layout>
+              <updates>
+                    <addressautocomplete>
+                          <file>addressautocomplete.xml</file>
+                    </addressautocomplete>
+              </updates>
+        </layout>
+  </frontend>
+  <global>
+    <helpers>
+      <addressautocomplete>
+        <class>Curkle_AddressAutoComplete_Helper</class>
+      </addressautocomplete>
+    </helpers>
+  </global>
+</config> 
