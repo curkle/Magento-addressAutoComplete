@@ -129,12 +129,22 @@ CURKLEAUTOCOMPLETE.method = {
             }
             else
             {
-                document.getElementById(('billing' + this.IdSeparator + f)).value = this.formFieldsValue[f];
+            	 if(document.getElementById(('billing' + this.IdSeparator + f)) === null){
+							   continue;
+							 }
+							 else
+							 {
+							 		document.getElementById(('billing' + this.IdSeparator + f)).value = this.formFieldsValue[f];
+							 }
+              
             }
         }
     },
     selectRegion:function (id,regionText)
     {
+    	 if(document.getElementById(('billing' + this.IdSeparator + id)) == null){
+			   return false;
+			 } 
         var el = document.getElementById(('billing' + this.IdSeparator + id));
         for(var i=0; i<el.options.length; i++) {
             if ( el.options[i].text == regionText ) {
@@ -145,14 +155,22 @@ CURKLEAUTOCOMPLETE.method = {
     },
     resetForm :function ()
     {
-        document.getElementById(('billing' + this.IdSeparator + 'street2')).value = '';
+    	 if(document.getElementById(('billing' + this.IdSeparator + 'street2')) !== null){
+			   document.getElementById(('billing' + this.IdSeparator + 'street2')).value = '';
+			 }   
     },
 
 
     setAutocompleteCountry : function () {
+    	
+    	 if(document.getElementById('billing:country_id') === null){
+			   country = 'US';//change your codes for default country 
+			 }
+			 else
+			 {
         var country = document.getElementById('billing:country_id').value;
-
-        this.autocomplete.setComponentRestrictions({ 'country': country });
+      }
+       this.autocomplete.setComponentRestrictions({ 'country': country });
     }
 
 
