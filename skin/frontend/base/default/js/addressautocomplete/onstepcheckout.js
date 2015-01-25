@@ -39,10 +39,15 @@ CURKLEAUTOCOMPLETE.method = {
         // populate the address fields in the form.
         google.maps.event.addListener(this.autocomplete, 'place_changed', function( event ) {CURKLEAUTOCOMPLETE.method.fillInAddress()});
         var billing_address = document.getElementById("billing:street1");
-        billing_address.addEventListener("focus", function( event ) {CURKLEAUTOCOMPLETE.method.setAutocompleteCountry()}, true);
+        if(billing_address != null){
+			 	  billing_address.addEventListener("focus", function( event ) {CURKLEAUTOCOMPLETE.method.setAutocompleteCountry()}, true);
+			 	} 
 
         var billing_country = document.getElementById("billing:country_id");
-        billing_country.addEventListener("change", function( event ) {CURKLEAUTOCOMPLETE.method.setAutocompleteCountry()}, true);
+        if(billing_country != null){
+        	 billing_country.addEventListener("change", function( event ) {CURKLEAUTOCOMPLETE.method.setAutocompleteCountry()}, true);
+        }
+       
 
     },
     getIdSeparator : function() {
@@ -104,6 +109,11 @@ CURKLEAUTOCOMPLETE.method = {
 
         this.appendStreetNumber();
         this.fillForm();
+        //for firecheckout only change zipcode
+        if(typeof  FireCheckout !== 'undefined')
+        {
+        	 checkout.update(checkout.urls.billing_address);
+        }
     },
 
     clearFormValues: function ()
@@ -138,7 +148,7 @@ CURKLEAUTOCOMPLETE.method = {
 							 }
               
             }
-        }
+        } 
     },
     selectRegion:function (id,regionText)
     {
