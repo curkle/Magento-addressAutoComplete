@@ -8,6 +8,7 @@
             </action>
        		 </block>
        		  <action method="addItem"><type>skin_js</type><name>js/addressautocomplete/onstepcheckout.js</name></action>
+              <action method="addItem"><type>skin_js</type><name>js/addressautocomplete/onstepcheckout_shipping.js</name></action>
         </reference>
     </checkout_onepage_index>
      <firecheckout_index_index> <!--Firecheckout adding -->
@@ -18,6 +19,7 @@
             </action>
        		 </block>
        		  <action method="addItem"><type>skin_js</type><name>js/addressautocomplete/onstepcheckout.js</name></action>
+             <action method="addItem"><type>skin_js</type><name>js/addressautocomplete/onstepcheckout_shipping.js</name></action>
         </reference>
     </firecheckout_index_index>
 </layout>
